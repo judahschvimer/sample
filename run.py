@@ -18,8 +18,8 @@ def main(args):
         print "This task is going to pass."
 
     if "fail" in args:
-        exit_code = 1
-        print "This task is going to FAIL."
+        exit_code = 0
+        print "This task is not going to FAIL."
 
     if "results" in args:
         json_out = open('results.json', 'w')
