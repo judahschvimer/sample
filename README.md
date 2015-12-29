@@ -1,1 +1,1 @@
-A sample porject for use with the Evergreen tutorial
+A sample project for use with the Evergreen tutorial
