@@ -35,6 +35,9 @@ functions:
       working_dir: src
       script: |
         echo "I was called with ${foobar}"
+        echo "<h1>foo bar</h1>"
+        echo "<script>console.log('HI')</script>"
+        echo "<h3>foo bar2</h3>"
 
 pre:
   command: shell.exec
@@ -58,7 +61,7 @@ tasks:
   depends_on: []
   commands:
     - func: "fetch source"
-    - func: "run a task that passes" 
+    - func: "run a task that passes"
     - func: "run a function with an arg"
       vars:
         foobar: "TESTING: ONE"
@@ -66,22 +69,22 @@ tasks:
       vars:
         foobar: "TESTING: TWO"
 
-- name: passing_test 
-  depends_on: 
+- name: passing_test
+  depends_on:
   - name: compile
   commands:
     - func: "fetch source"
     - func: "run a task that passes"
 
-- name: failing_test 
-  depends_on: 
+- name: failing_test
+  depends_on:
   - name: compile
   commands:
     - func: "fetch source"
     - func: "run a task that fails"
 
 - name: timeout_test
-  depends_on: 
+  depends_on:
   - name: compile
   commands:
     - func: "fetch source"
