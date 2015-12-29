@@ -36,6 +36,7 @@ functions:
       script: |
         echo "I was called with ${foobar}"
         echo "<h1>foo bar</h1>"
+        >&2 echo "this line is an error"
         echo "<script>console.log('HI')</script>"
         echo "<h3>foo bar2</h3>"
 
