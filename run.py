@@ -15,6 +15,10 @@ def main(args):
 
     exit_code = 0
     if "pass" in args:
+        f = open("test.txt", "r")
+        text = f.read()
+        print text
+        f.close()
         exit_code = 0
         print "This task is going to pass."
 
