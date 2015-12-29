@@ -11,6 +11,7 @@ def main(args):
             #print "sleepin till i die (%s)" % count
             time.sleep(10)
             count += 1
+            break
 
     exit_code = 0
     if "pass" in args:
